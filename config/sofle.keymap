@@ -27,6 +27,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        spacemacs-escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <28 27>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -41,14 +50,16 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESC    &kp N1         &kp N2     &kp N3    &kp N4  &kp N5                              &kp N6           &kp N7  &kp N8    &kp N9    &kp N0  &kp BACKSPACE
-&kp TAB    &kp MINUS      &kp COMMA  &kp DOT   &kp P   &kp Y                               &kp F            &kp G   &kp C     &kp R     &kp L   &kp SQT
-&kp LSHFT  &kp A          &kp O      &kp E     &kp U   &kp I                               &kp D            &kp H   &kp T     &kp N     &kp S   &kp DEL
-&kp LCTRL  &kp SEMICOLON  &kp Q      &kp J     &kp K   &kp X      &kp C_MUTE    &none      &kp B            &kp M   &kp W     &kp V     &kp Z   &mt GREATER_THAN LESS_THAN
-                          &kp LALT   &kp LGUI  &mo 1   &kp SPACE  &kp RET       &kp SPACE  &mt RCTRL ENTER  &mo 2   &kp RALT  &kp RGUI
+&kp ESC    &kp N1         &kp N2     &kp N3    &kp N4  &kp N5                               &kp N6           &kp N7  &kp N8    &kp N9    &kp N0  &kp BACKSPACE
+&kp TAB    &kp MINUS      &kp COMMA  &kp DOT   &kp P   &kp Y                                &kp F            &kp G   &kp C     &kp R     &kp L   &kp SQT
+&kp LSHFT  &kp A          &kp O      &kp E     &kp U   &kp I                                &kp D            &kp H   &kp T     &kp N     &kp S   &kp DEL
+&kp LCTRL  &kp SEMICOLON  &kp Q      &kp J     &kp K   &kp X      &kp C_MUTE    &bt BT_NXT  &kp B            &kp M   &kp W     &kp V     &kp Z   &mt GREATER_THAN LESS_THAN
+                          &kp LALT   &kp LGUI  &mo 1   &kp SPACE  &kp RET       &kp SPACE   &mt RCTRL ENTER  &mo 2   &kp RALT  &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp PG_UP PG_DN>;
         };
 
         lower_layer {
