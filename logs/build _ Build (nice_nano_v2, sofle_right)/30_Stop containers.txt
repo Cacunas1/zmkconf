@@ -1,6 +1,0 @@
-﻿2025-12-10T15:11:03.5974997Z Stop and remove container: 2a9fc94846d24025b77ac71dca138ed3_zmkfirmwarezmkbuildarmstable_74da7b
-2025-12-10T15:11:03.5980534Z ##[command]/usr/bin/docker rm --force 4efee7f38a325aa940131733ebd834219c6f3a89029ae05ca5377a87a3b7bdd2
-2025-12-10T15:11:09.5844876Z 4efee7f38a325aa940131733ebd834219c6f3a89029ae05ca5377a87a3b7bdd2
-2025-12-10T15:11:09.5880880Z Remove container network: github_network_d5ae69be11704380a318c34c6dd816b2
-2025-12-10T15:11:09.5885102Z ##[command]/usr/bin/docker network rm github_network_d5ae69be11704380a318c34c6dd816b2
-2025-12-10T15:11:09.7166924Z github_network_d5ae69be11704380a318c34c6dd816b2
