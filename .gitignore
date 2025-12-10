@@ -1,2 +1,4 @@
 
 .zmk/
+*.zip
+logs/
