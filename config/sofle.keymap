@@ -35,6 +35,8 @@
         spacemacs-escape {
             bindings = <&kp ESCAPE>;
             key-positions = <28 27>;
+            timeout-ms = <50>;              // Tiempo máximo entre las 2 teclas (más estricto)
+            require-prior-idle-ms = <150>;  // Solo activa si no hubo teclas en los últimos 150ms
         };
     };
 
@@ -99,7 +101,7 @@
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &trans     &trans    &trans    &trans           &bt BT_CLR_ALL  &kp DEL
 &trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                              &kp PG_UP  &kp HOME  &kp UP    &kp END          &kp DEL         &trans
-&trans      &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                            &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT        &trans          &trans
+&trans      &kp LALT      &kp LCTRL     &kp GRAVE     &trans        &kp CLCK                            &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT        &trans          &trans
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &bt BT_NXT  &trans     &trans    &trans    &kp PRINTSCREEN  &trans          &trans
                           &trans        &trans        &trans        &trans        &trans    &trans      &trans     &trans    &trans    &trans
             >;
