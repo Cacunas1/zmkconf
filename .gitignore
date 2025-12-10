@@ -2,3 +2,5 @@
 .zmk/
 *.zip
 logs/
+.DS_Store
+*.uf2
