@@ -1,0 +1,29 @@
+﻿2025-12-10T15:09:04.8605958Z ##[group]Run actions/cache@v4
+2025-12-10T15:09:04.8606255Z with:
+2025-12-10T15:09:04.8606723Z   path: /tmp/zmk-config/modules/
+/tmp/zmk-config/tools/
+/tmp/zmk-config/zephyr/
+/tmp/zmk-config/bootloader/
+/tmp/zmk-config/zmk/
+
+2025-12-10T15:09:04.8607516Z   key: Linux-build-cache-zephyr-4.1.0-modules-a47137385c437395cdf57683fc18e1f05519a3e700e9ba396155aae31e6a2353
+2025-12-10T15:09:04.8608144Z   restore-keys: Linux-build-cache-zephyr-4.1.0-modules-
+Linux-build-
+Linux-
+
+2025-12-10T15:09:04.8608525Z   enableCrossOsArchive: false
+2025-12-10T15:09:04.8608758Z   fail-on-cache-miss: false
+2025-12-10T15:09:04.8608964Z   lookup-only: false
+2025-12-10T15:09:04.8609160Z   save-always: false
+2025-12-10T15:09:04.8609339Z env:
+2025-12-10T15:09:04.8609516Z   build_dir: /tmp/tmp.lkxTFHEZ2w
+2025-12-10T15:09:04.8609752Z   base_dir: /tmp/zmk-config
+2025-12-10T15:09:04.8609959Z   zephyr_version: 4.1.0
+2025-12-10T15:09:04.8610170Z   extra_west_args: 
+2025-12-10T15:09:04.8610484Z   extra_cmake_args: -DSHIELD="sofle_left" -DZMK_EXTRA_MODULES='/__w/zmkconf/zmkconf'
+2025-12-10T15:09:04.8610897Z   display_name: sofle_left - nice_nano_v2
+2025-12-10T15:09:04.8611168Z   artifact_name: sofle_left-nice_nano_v2-zmk
+2025-12-10T15:09:04.8611679Z   cache_name: cache-zephyr-4.1.0-modules
+2025-12-10T15:09:04.8612075Z ##[endgroup]
+2025-12-10T15:09:04.8615908Z ##[command]/usr/bin/docker exec  c8390590294acb2ef39d9b7a2732c3aca02cb7af6f0019d56dd902e48e6861d5 sh -c "cat /etc/*release | grep ^ID"
+2025-12-10T15:09:05.2278929Z Cache not found for input keys: Linux-build-cache-zephyr-4.1.0-modules-a47137385c437395cdf57683fc18e1f05519a3e700e9ba396155aae31e6a2353, Linux-build-cache-zephyr-4.1.0-modules-, Linux-build-, Linux-

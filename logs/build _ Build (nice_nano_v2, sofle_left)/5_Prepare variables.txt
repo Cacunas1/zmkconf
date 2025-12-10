@@ -1,0 +1,39 @@
+﻿2025-12-10T15:09:04.6569163Z ##[group]Run if [ -e zephyr/module.yml ]; then
+2025-12-10T15:09:04.6569560Z [36;1mif [ -e zephyr/module.yml ]; then[0m
+2025-12-10T15:09:04.6569920Z [36;1m  export zmk_load_arg=" -DZMK_EXTRA_MODULES='${GITHUB_WORKSPACE}'"[0m
+2025-12-10T15:09:04.6570292Z [36;1m  new_tmp_dir="${TMPDIR:-/tmp}/zmk-config"[0m
+2025-12-10T15:09:04.6570578Z [36;1m  mkdir -p "${new_tmp_dir}"[0m
+2025-12-10T15:09:04.6570849Z [36;1m  echo "base_dir=${new_tmp_dir}" >> $GITHUB_ENV[0m
+2025-12-10T15:09:04.6571118Z [36;1melse[0m
+2025-12-10T15:09:04.6571347Z [36;1m  echo "base_dir=${GITHUB_WORKSPACE}" >> $GITHUB_ENV[0m
+2025-12-10T15:09:04.6572270Z [36;1mfi[0m
+2025-12-10T15:09:04.6572482Z [36;1m[0m
+2025-12-10T15:09:04.6572675Z [36;1mif [ -n "${snippet}" ]; then[0m
+2025-12-10T15:09:04.6572970Z [36;1m  extra_west_args="-S \"${snippet}\""[0m
+2025-12-10T15:09:04.6573230Z [36;1mfi[0m
+2025-12-10T15:09:04.6573412Z [36;1m[0m
+2025-12-10T15:09:04.6573672Z [36;1mecho "zephyr_version=${ZEPHYR_VERSION}" >> $GITHUB_ENV[0m
+2025-12-10T15:09:04.6574115Z [36;1mecho "extra_west_args=${extra_west_args}" >> $GITHUB_ENV[0m
+2025-12-10T15:09:04.6574620Z [36;1mecho "extra_cmake_args=${shield:+-DSHIELD=\"$shield\"}${zmk_load_arg}" >> $GITHUB_ENV[0m
+2025-12-10T15:09:04.6575172Z [36;1mecho "display_name=${shield:+$shield - }${board}" >> $GITHUB_ENV[0m
+2025-12-10T15:09:04.6575717Z [36;1mecho "artifact_name=${artifact_name:-${shield:+$shield-}${board//\//_}-zmk}" >> $GITHUB_ENV[0m
+2025-12-10T15:09:04.6577460Z shell: bash -x {0}
+2025-12-10T15:09:04.6577685Z env:
+2025-12-10T15:09:04.6577892Z   build_dir: /tmp/tmp.lkxTFHEZ2w
+2025-12-10T15:09:04.6578143Z   board: nice_nano_v2
+2025-12-10T15:09:04.6578350Z   shield: sofle_left
+2025-12-10T15:09:04.6578547Z   artifact_name: 
+2025-12-10T15:09:04.6578744Z   snippet: 
+2025-12-10T15:09:04.6578929Z ##[endgroup]
+2025-12-10T15:09:04.7161042Z + '[' -e zephyr/module.yml ']'
+2025-12-10T15:09:04.7162234Z + export 'zmk_load_arg= -DZMK_EXTRA_MODULES='\''/__w/zmkconf/zmkconf'\'''
+2025-12-10T15:09:04.7163046Z + zmk_load_arg=' -DZMK_EXTRA_MODULES='\''/__w/zmkconf/zmkconf'\'''
+2025-12-10T15:09:04.7163862Z + new_tmp_dir=/tmp/zmk-config
+2025-12-10T15:09:04.7164314Z + mkdir -p /tmp/zmk-config
+2025-12-10T15:09:04.7175239Z + echo base_dir=/tmp/zmk-config
+2025-12-10T15:09:04.7175742Z + '[' -n '' ']'
+2025-12-10T15:09:04.7176113Z + echo zephyr_version=4.1.0
+2025-12-10T15:09:04.7176505Z + echo extra_west_args=
+2025-12-10T15:09:04.7178227Z + echo 'extra_cmake_args=-DSHIELD="sofle_left" -DZMK_EXTRA_MODULES='\''/__w/zmkconf/zmkconf'\'''
+2025-12-10T15:09:04.7179525Z + echo 'display_name=sofle_left - nice_nano_v2'
+2025-12-10T15:09:04.7180033Z + echo artifact_name=sofle_left-nice_nano_v2-zmk

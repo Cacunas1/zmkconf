@@ -1,0 +1,21 @@
+﻿2025-12-10T15:10:57.9475428Z ##[group]Run if [ -f "/tmp/tmp.lkxTFHEZ2w/zephyr/zephyr.dts" ]
+2025-12-10T15:10:57.9475854Z [36;1mif [ -f "/tmp/tmp.lkxTFHEZ2w/zephyr/zephyr.dts" ][0m
+2025-12-10T15:10:57.9476133Z [36;1mthen[0m
+2025-12-10T15:10:57.9476356Z [36;1m  cat "/tmp/tmp.lkxTFHEZ2w/zephyr/zephyr.dts"[0m
+2025-12-10T15:10:57.9476698Z [36;1melif [ -f "/tmp/tmp.lkxTFHEZ2w/zephyr/zephyr.dts.pre" ][0m
+2025-12-10T15:10:57.9476996Z [36;1mthen[0m
+2025-12-10T15:10:57.9477220Z [36;1m  cat -s "/tmp/tmp.lkxTFHEZ2w/zephyr/zephyr.dts.pre"[0m
+2025-12-10T15:10:57.9477489Z [36;1melse[0m
+2025-12-10T15:10:57.9477662Z [36;1m  echo "No Devicetree output"[0m
+2025-12-10T15:10:57.9477882Z [36;1mfi[0m
+2025-12-10T15:10:57.9478113Z shell: sh -e {0}
+2025-12-10T15:10:57.9478274Z env:
+2025-12-10T15:10:57.9478443Z   build_dir: /tmp/tmp.lkxTFHEZ2w
+2025-12-10T15:10:57.9478658Z   base_dir: /tmp/zmk-config
+2025-12-10T15:10:57.9478860Z   zephyr_version: 4.1.0
+2025-12-10T15:10:57.9479039Z   extra_west_args: 
+2025-12-10T15:10:57.9479340Z   extra_cmake_args: -DSHIELD="sofle_left" -DZMK_EXTRA_MODULES='/__w/zmkconf/zmkconf'
+2025-12-10T15:10:57.9479726Z   display_name: sofle_left - nice_nano_v2
+2025-12-10T15:10:57.9479984Z   artifact_name: sofle_left-nice_nano_v2-zmk
+2025-12-10T15:10:57.9480212Z ##[endgroup]
+2025-12-10T15:10:57.9996445Z No Devicetree output

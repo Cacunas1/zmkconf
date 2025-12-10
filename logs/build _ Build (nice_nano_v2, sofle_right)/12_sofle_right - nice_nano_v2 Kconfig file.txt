@@ -1,0 +1,18 @@
+﻿2025-12-10T15:11:03.1708055Z ##[group]Run if [ -f "/tmp/tmp.P4V1cHsGpE/zephyr/.config" ]
+2025-12-10T15:11:03.1708506Z [36;1mif [ -f "/tmp/tmp.P4V1cHsGpE/zephyr/.config" ][0m
+2025-12-10T15:11:03.1708789Z [36;1mthen[0m
+2025-12-10T15:11:03.1709049Z [36;1m  grep -v -e "^#" -e "^$" "/tmp/tmp.P4V1cHsGpE/zephyr/.config" | sort[0m
+2025-12-10T15:11:03.1709352Z [36;1melse[0m
+2025-12-10T15:11:03.1709542Z [36;1m  echo "No Kconfig output"[0m
+2025-12-10T15:11:03.1709956Z [36;1mfi[0m
+2025-12-10T15:11:03.1710226Z shell: sh -e {0}
+2025-12-10T15:11:03.1710403Z env:
+2025-12-10T15:11:03.1710574Z   build_dir: /tmp/tmp.P4V1cHsGpE
+2025-12-10T15:11:03.1710805Z   base_dir: /tmp/zmk-config
+2025-12-10T15:11:03.1711011Z   zephyr_version: 4.1.0
+2025-12-10T15:11:03.1711203Z   extra_west_args: 
+2025-12-10T15:11:03.1711519Z   extra_cmake_args: -DSHIELD="sofle_right" -DZMK_EXTRA_MODULES='/__w/zmkconf/zmkconf'
+2025-12-10T15:11:03.1711919Z   display_name: sofle_right - nice_nano_v2
+2025-12-10T15:11:03.1712204Z   artifact_name: sofle_right-nice_nano_v2-zmk
+2025-12-10T15:11:03.1712482Z ##[endgroup]
+2025-12-10T15:11:03.2220876Z No Kconfig output

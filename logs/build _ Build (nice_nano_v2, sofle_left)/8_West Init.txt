@@ -1,0 +1,15 @@
+﻿2025-12-10T15:09:05.2381951Z ##[group]Run west init -l "/tmp/zmk-config/config"
+2025-12-10T15:09:05.2382341Z [36;1mwest init -l "/tmp/zmk-config/config"[0m
+2025-12-10T15:09:05.2382715Z shell: sh -e {0}
+2025-12-10T15:09:05.2382903Z env:
+2025-12-10T15:09:05.2383071Z   build_dir: /tmp/tmp.lkxTFHEZ2w
+2025-12-10T15:09:05.2383301Z   base_dir: /tmp/zmk-config
+2025-12-10T15:09:05.2383504Z   zephyr_version: 4.1.0
+2025-12-10T15:09:05.2383693Z   extra_west_args: 
+2025-12-10T15:09:05.2383990Z   extra_cmake_args: -DSHIELD="sofle_left" -DZMK_EXTRA_MODULES='/__w/zmkconf/zmkconf'
+2025-12-10T15:09:05.2384361Z   display_name: sofle_left - nice_nano_v2
+2025-12-10T15:09:05.2384619Z   artifact_name: sofle_left-nice_nano_v2-zmk
+2025-12-10T15:09:05.2384855Z ##[endgroup]
+2025-12-10T15:09:05.4233437Z === Initializing from existing manifest repository config
+2025-12-10T15:09:05.4234256Z --- Creating /tmp/zmk-config/.west and local configuration file
+2025-12-10T15:09:05.4244743Z === Initialized. Now run "west update" inside /tmp/zmk-config.

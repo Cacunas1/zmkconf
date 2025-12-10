@@ -1,0 +1,70 @@
+﻿2025-12-10T15:09:04.0440019Z ##[group]Run actions/checkout@v4
+2025-12-10T15:09:04.0440601Z with:
+2025-12-10T15:09:04.0440808Z   repository: Cacunas1/zmkconf
+2025-12-10T15:09:04.0441280Z   token: ***
+2025-12-10T15:09:04.0441824Z   ssh-strict: true
+2025-12-10T15:09:04.0442043Z   ssh-user: git
+2025-12-10T15:09:04.0442233Z   persist-credentials: true
+2025-12-10T15:09:04.0442465Z   clean: true
+2025-12-10T15:09:04.0442670Z   sparse-checkout-cone-mode: true
+2025-12-10T15:09:04.0442910Z   fetch-depth: 1
+2025-12-10T15:09:04.0443093Z   fetch-tags: false
+2025-12-10T15:09:04.0443287Z   show-progress: true
+2025-12-10T15:09:04.0443473Z   lfs: false
+2025-12-10T15:09:04.0443648Z   submodules: false
+2025-12-10T15:09:04.0443832Z   set-safe-directory: true
+2025-12-10T15:09:04.0444280Z ##[endgroup]
+2025-12-10T15:09:04.0500340Z ##[command]/usr/bin/docker exec  c8390590294acb2ef39d9b7a2732c3aca02cb7af6f0019d56dd902e48e6861d5 sh -c "cat /etc/*release | grep ^ID"
+2025-12-10T15:09:04.2707069Z Syncing repository: Cacunas1/zmkconf
+2025-12-10T15:09:04.2709272Z ##[group]Getting Git version info
+2025-12-10T15:09:04.2709999Z Working directory is '/__w/zmkconf/zmkconf'
+2025-12-10T15:09:04.2710893Z [command]/usr/bin/git version
+2025-12-10T15:09:04.2711376Z git version 2.43.0
+2025-12-10T15:09:04.2742385Z ##[endgroup]
+2025-12-10T15:09:04.2758320Z Temporarily overriding HOME='/__w/_temp/260ebf6f-da88-42b5-bd6d-99573c99af2d' before making global git config changes
+2025-12-10T15:09:04.2759073Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-10T15:09:04.2765178Z [command]/usr/bin/git config --global --add safe.directory /__w/zmkconf/zmkconf
+2025-12-10T15:09:04.2799856Z Deleting the contents of '/__w/zmkconf/zmkconf'
+2025-12-10T15:09:04.2811742Z ##[group]Initializing the repository
+2025-12-10T15:09:04.2815535Z [command]/usr/bin/git init /__w/zmkconf/zmkconf
+2025-12-10T15:09:04.2847679Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-12-10T15:09:04.2849428Z hint: is subject to change. To configure the initial branch name to use in all
+2025-12-10T15:09:04.2850380Z hint: of your new repositories, which will suppress this warning, call:
+2025-12-10T15:09:04.2850993Z hint: 
+2025-12-10T15:09:04.2851664Z hint: 	git config --global init.defaultBranch <name>
+2025-12-10T15:09:04.2852229Z hint: 
+2025-12-10T15:09:04.2852731Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-12-10T15:09:04.2853636Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-12-10T15:09:04.2854266Z hint: 
+2025-12-10T15:09:04.2854612Z hint: 	git branch -m <name>
+2025-12-10T15:09:04.2857070Z Initialized empty Git repository in /__w/zmkconf/zmkconf/.git/
+2025-12-10T15:09:04.2869188Z [command]/usr/bin/git remote add origin https://github.com/Cacunas1/zmkconf
+2025-12-10T15:09:04.2898619Z ##[endgroup]
+2025-12-10T15:09:04.2899097Z ##[group]Disabling automatic garbage collection
+2025-12-10T15:09:04.2902785Z [command]/usr/bin/git config --local gc.auto 0
+2025-12-10T15:09:04.2930574Z ##[endgroup]
+2025-12-10T15:09:04.2930973Z ##[group]Setting up auth
+2025-12-10T15:09:04.2938635Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-10T15:09:04.2967751Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-10T15:09:04.3200688Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-10T15:09:04.3231859Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-10T15:09:04.3528882Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-12-10T15:09:04.3533762Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-12-10T15:09:04.3739751Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-12-10T15:09:04.3777823Z ##[endgroup]
+2025-12-10T15:09:04.3778456Z ##[group]Fetching the repository
+2025-12-10T15:09:04.3787037Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +fed26c059401bada87695711292af1806ef07a66:refs/remotes/origin/main
+2025-12-10T15:09:04.5508338Z From https://github.com/Cacunas1/zmkconf
+2025-12-10T15:09:04.5508984Z  * [new ref]         fed26c059401bada87695711292af1806ef07a66 -> origin/main
+2025-12-10T15:09:04.5529979Z ##[endgroup]
+2025-12-10T15:09:04.5530452Z ##[group]Determining the checkout info
+2025-12-10T15:09:04.5532733Z ##[endgroup]
+2025-12-10T15:09:04.5538780Z [command]/usr/bin/git sparse-checkout disable
+2025-12-10T15:09:04.5575828Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-12-10T15:09:04.5600869Z ##[group]Checking out the ref
+2025-12-10T15:09:04.5605699Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-12-10T15:09:04.5650916Z Switched to a new branch 'main'
+2025-12-10T15:09:04.5652025Z branch 'main' set up to track 'origin/main'.
+2025-12-10T15:09:04.5657760Z ##[endgroup]
+2025-12-10T15:09:04.5691990Z [command]/usr/bin/git log -1 --format=%H
+2025-12-10T15:09:04.5714261Z fed26c059401bada87695711292af1806ef07a66

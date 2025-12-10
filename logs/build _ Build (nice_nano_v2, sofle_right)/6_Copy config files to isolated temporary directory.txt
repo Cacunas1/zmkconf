@@ -1,0 +1,15 @@
+﻿2025-12-10T15:09:08.3738594Z ##[group]Run if [ "/tmp/zmk-config" != "${GITHUB_WORKSPACE}" ]; then
+2025-12-10T15:09:08.3739111Z [36;1mif [ "/tmp/zmk-config" != "${GITHUB_WORKSPACE}" ]; then[0m
+2025-12-10T15:09:08.3739492Z [36;1m  mkdir "/tmp/zmk-config/config"[0m
+2025-12-10T15:09:08.3739828Z [36;1m  cp -R config/* "/tmp/zmk-config/config/"[0m
+2025-12-10T15:09:08.3740130Z [36;1mfi[0m
+2025-12-10T15:09:08.3740415Z shell: sh -e {0}
+2025-12-10T15:09:08.3740621Z env:
+2025-12-10T15:09:08.3740829Z   build_dir: /tmp/tmp.P4V1cHsGpE
+2025-12-10T15:09:08.3741096Z   base_dir: /tmp/zmk-config
+2025-12-10T15:09:08.3741350Z   zephyr_version: 4.1.0
+2025-12-10T15:09:08.3741578Z   extra_west_args: 
+2025-12-10T15:09:08.3741942Z   extra_cmake_args: -DSHIELD="sofle_right" -DZMK_EXTRA_MODULES='/__w/zmkconf/zmkconf'
+2025-12-10T15:09:08.3742410Z   display_name: sofle_right - nice_nano_v2
+2025-12-10T15:09:08.3742893Z   artifact_name: sofle_right-nice_nano_v2-zmk
+2025-12-10T15:09:08.3743193Z ##[endgroup]

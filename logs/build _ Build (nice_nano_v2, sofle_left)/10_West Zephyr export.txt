@@ -1,0 +1,20 @@
+﻿2025-12-10T15:10:54.1940601Z ##[group]Run west zephyr-export
+2025-12-10T15:10:54.1940919Z [36;1mwest zephyr-export[0m
+2025-12-10T15:10:54.1941375Z shell: sh -e {0}
+2025-12-10T15:10:54.1941781Z env:
+2025-12-10T15:10:54.1941961Z   build_dir: /tmp/tmp.lkxTFHEZ2w
+2025-12-10T15:10:54.1942184Z   base_dir: /tmp/zmk-config
+2025-12-10T15:10:54.1942389Z   zephyr_version: 4.1.0
+2025-12-10T15:10:54.1942565Z   extra_west_args: 
+2025-12-10T15:10:54.1942885Z   extra_cmake_args: -DSHIELD="sofle_left" -DZMK_EXTRA_MODULES='/__w/zmkconf/zmkconf'
+2025-12-10T15:10:54.1943257Z   display_name: sofle_left - nice_nano_v2
+2025-12-10T15:10:54.1943514Z   artifact_name: sofle_left-nice_nano_v2-zmk
+2025-12-10T15:10:54.1943748Z ##[endgroup]
+2025-12-10T15:10:54.7493254Z Zephyr (/tmp/zmk-config/zephyr/share/zephyr-package/cmake)
+2025-12-10T15:10:54.7493911Z has been added to the user package registry in:
+2025-12-10T15:10:54.7494212Z ~/.cmake/packages/Zephyr
+2025-12-10T15:10:54.7494354Z 
+2025-12-10T15:10:55.0269231Z ZephyrUnittest (/tmp/zmk-config/zephyr/share/zephyrunittest-package/cmake)
+2025-12-10T15:10:55.0269789Z has been added to the user package registry in:
+2025-12-10T15:10:55.0270093Z ~/.cmake/packages/ZephyrUnittest
+2025-12-10T15:10:55.0270245Z 
