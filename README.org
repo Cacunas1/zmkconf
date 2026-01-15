@@ -1,0 +1,108 @@
+#+title: ZMK Configuration for Sofle Keyboard
+
+Esta es mi configuración personalizada de ZMK para un teclado Sofle split
+mecánico.
+
+** ¿Qué es ZMK?
+
+[[https://zmk.dev/][ZMK]] (Zephyr Keyboard Firmware) es un firmware moderno y de código abierto para
+teclados mecánicos. Proporciona:
+
+- Soporte para teclados split inalámbricos
+- Conectividad Bluetooth
+- Keybindings completamente personalizables
+- Comportamientos avanzados (hold-tap, combos, capas condicionales)
+- Bajo consumo de energía
+
+** Hardware
+
+- *Teclado*: Sofle v2 (36 teclas + 2 encoders por lado)
+- *Placas de control*: [[https://nicekeyboards.com/][nice!nano]] (2 unidades, izquierda y derecha)
+- *Conectividad*: Bluetooth + cable USB
+
+** Configuración Actual
+
+*** Capas (Layers)
+
+El teclado tiene 4 capas:
+
+- **BASE (0)**: Layout QWERTY modificado con soporte para navegación y símbolos
+- **LOWER (1)**: Símbolos, números del teclado numérico y funciones especiales
+- **RAISE (2)**: Navegación, control Bluetooth y funciones multimedia
+- **ADJUST (3)**: Se activa automáticamente al presionar LOWER + RAISE
+  simultáneamente. Controla RGB, audio y otros ajustes
+
+*** Layout BASE
+
+#+begin_example
+┌─────┬─────┬─────┬─────┬─────┬─────┐           ┌─────┬─────┬─────┬─────┬─────┬─────┐
+│ ESC │  1  │  2  │  3  │  4  │  5  │           │  6  │  7  │  8  │  9  │  0  │BSPC │
+├─────┼─────┼─────┼─────┼─────┼─────┤           ├─────┼─────┼─────┼─────┼─────┼─────┤
+│ TAB │  Q  │  W  │  E  │  R  │  T  │           │  Y  │  U  │  I  │  O  │  P  │  [  │
+├─────┼─────┼─────┼─────┼─────┼─────┤           ├─────┼─────┼─────┼─────┼─────┼─────┤
+│SHFT │  A  │  S  │  D  │  F  │  G  │           │  H  │  J  │  K  │  L  │  ;  │ '   │
+├─────┼─────┼─────┼─────┼─────┼─────┼─────┬──┬──┼─────┼─────┼─────┼─────┼─────┼─────┤
+│CTRL │  Z  │  X  │  C  │  V  │  B  │MUTE │  │  │  N  │  M  │  ,  │  .  │  /  │CTRL │
+└─────┴─────┴─────┼─────┼─────┼─────┼─────┼──┼──┼─────┼─────┼─────┼─────┴─────┴─────┘
+                  │  \  │ ALT │ GUI │LOWER│  │  │RAISE│ GUI │ ALT │
+                  └─────┴─────┴─────┴─────┘  └──┘└─────┴─────┴─────┘
+#+end_example
+
+*** Comportamientos Especiales
+
+- **Homerow Mods**: Las teclas A, S, D, F (izquierda) y J, K, L, Ñ (derecha)
+  actúan como modificadores (Ctrl, Alt, Shift, Gui) cuando se mantienen
+  presionadas, o como letras si se presionan rápidamente
+- **Combos**:
+  - V + C = ESC
+  - Teclas derecha específicas = BACKSPACE
+  - M + Coma = DELETE
+- **Encoders**: Control de volumen (arriba) y cambio de canción (abajo) en la capa BASE
+
+*** Características Habilitadas
+
+- [[https://zmk.dev/docs/features/pointing][Mouse Pointing]]: Control de cursor con el teclado
+- [[https://zmk.dev/docs/hardware/components/encoders][Rotary Encoders]]: Dos encoders por lado para control multimedia
+- Bluetooth: Soporte para múltiples dispositivos emparejados
+- [[https://zmk.dev/docs/features/conditional-layers][Conditional Layers]]: La capa ADJUST se activa automáticamente
+
+** Compilación
+
+El proyecto usa GitHub Actions para compilar automáticamente el firmware en cada
+push o pull request. Los archivos compilados se generan como artifacts en las
+acciones.
+
+Para compilar localmente (requiere herramientas de ZMK instaladas):
+
+#+begin_src bash
+west build -b nice_nano -- -DSHIELD=sofle_left
+west build -b nice_nano -- -DSHIELD=sofle_right
+#+end_src
+
+** Estructura del Repositorio
+
+- ~config/~: Archivos de configuración
+  - ~sofle.keymap~: Definición de capas, keybindings y comportamientos
+  - ~sofle.conf~: Configuración de hardware (features
+    habilitados/deshabilitados)
+  - ~west.yml~: Manifiesto de dependencias
+- ~firmware/~: Outputs compilados
+- ~boards/~: Definiciones de placas personalizadas (si las hay)
+- ~.github/workflows/~: Pipeline de CI para GitHub Actions
+- ~build.yaml~: Configuración de qué boards/shields compilar
+
+** Historial de Cambios Recientes
+
+- Desactivado sleep mode para mantener el teclado activo
+- Cambio de Layout Corne a Sofle
+- Implementación de mouse pointing
+- Ajustes en hold-tap timing y hold-trigger key positions
+- Limpieza de keybindings obsoletos
+
+** Recursos Útiles
+
+- [[https://zmk.dev/][Documentación oficial de ZMK]]
+- [[https://zmk.dev/docs/features/keymaps][ZMK Keymaps & Layers]]
+- [[https://zmk.dev/docs/features/behaviors/hold-tap][Hold-Tap Behavior]]
+- [[https://github.com/sofle/sofle][Repositorio oficial del Sofle]]
+- [[https://zmk.dev/docs/features/combos][ZMK Combos]]
