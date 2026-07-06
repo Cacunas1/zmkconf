@@ -75,8 +75,8 @@ acciones.
 Para compilar localmente (requiere herramientas de ZMK instaladas):
 
 #+begin_src bash
-west build -b nice_nano -- -DSHIELD=sofle_left
-west build -b nice_nano -- -DSHIELD=sofle_right
+west build -b nice_nano//zmk -- -DSHIELD=sofle_left
+west build -b nice_nano//zmk -- -DSHIELD=sofle_right
 #+end_src
 
 ** Estructura del Repositorio
